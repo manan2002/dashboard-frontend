@@ -1,0 +1,42 @@
+body{
+    padding:0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+nav{
+    background-color: #444;
+    flex: 1 1 25vw;
+}
+
+main{
+    background-color: #999;
+    flex: 3 1 75vw;
+}
+
+.row{
+    width: 100vw;
+    background-color: #105555;
+    height: 50vh;
+}
+.fl{
+    display: flex;
+    background-color: #5270ff;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 0.5rem;
+    flex: 1 1 12%;
+    background-color: #9ecbdd;
+    border: 1px solid white;
+    text-align: center;
+}
