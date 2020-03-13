@@ -1,28 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="reset.css">
+    
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="https://kit.fontawesome.com/08d90d078b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <nav>NAVV</nav>
+    <div class="main-flex-container">
+        <nav>
+            <ul class="nav-items">
+                <li class = "nav-item" id="sites"><i class="fas fa-map-marker-alt"></i></li>
+                <li class = "nav-item"><i class="fas fa-cloud-sun-rain"></i></li>
+                <li class = "nav-item"><i class="fas fa-adjust"></i></li>
+            </ul>
+        </nav>
         <main>
-            <div class="row fl">
-                <div class="card">MAP</div>
-                <div class="card">TEMP</div>
-                <div class="card">HUMIDITY</div>
-                <div class="card">WIND SPEED</div>
-                <div class="card">WIND DIRn</div>
+            <div class="row row-flex" id="row-1">
+                <div class="card card-map" id = "map">MAP</div>
+                <div class="card metric-card">
+                    <div class="card-header">Temperature</div>
+                    <div class="card-body">
+                        <div class="metric-stat">
+                            <div class="min">Min: 8</div>
+                            <div class="max">Max: 40</div>
+                            <div class="avg">Average: 23</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card metric-card">
+                    <div class="card-header">Humidity</div>
+                    <div class="card-body">
+                        <div class="metric-stat">
+                            <div class="min">Min: 8</div>
+                            <div class="max">Max: 40</div>
+                            <div class="avg">Average: 23</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card metric-card">
+                    <div class="card-header">Wind Speed</div>
+                    <div class="card-body">
+                        <div class="metric-stat">
+                            <div class="min">Min: 8</div>
+                            <div class="max">Max: 40</div>
+                            <div class="avg">Average: 23</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card metric-card">
+                    <div class="card-header">Wind Dirn</div>
+                    <div class="card-body">
+                        <div class="metric-stat">
+                            <div class="min">Min: 8</div>
+                            <div class="max">Max: 40</div>
+                            <div class="avg">Average: 23</div>
+                        </div>
+                    </div>
+                </div>
+            
             </div>
-            <div class="row">
-                CHART
+            <div class="row row-flex" id="row-2">
+                <div class="card controls">CONTROLS</div>
+                <div class="card card-chart">CHART</div>
             </div>
         </main>
     </div>
+    <script src="gmap.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

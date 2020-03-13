@@ -1,42 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
 body{
-    padding:0;
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
 }
 
-.container{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
+.main-flex-container{
     height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+  
+
+main{
+    
+    flex: 13;
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    
+    flex: 1;
+}
+.row-flex{
+    display: flex;
+}
+#row-2{
+    margin-bottom: 2vh;
+}
+.card{
+    flex: 1;
+    color: #000;
+    margin: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 2%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12);
+}
+.card-header{
+    font-size: 1.7rem;
+    padding: 8% 0 8% 3%;
+    flex: 1
+}
+.card-body{
+    flex: 5;
+    width: 100%;
+    
+}
+.card:hover{
+    transform: scale(1.007);
+  
+    border: 1px solid #55f;
+}
+.metric-stat{
+    font-size: 1.2rem;
+    padding: 8% 0 8% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.card-map{
+    flex: 2;
+}
+
+.card-chart{
+    flex: 5;
+}
+
+.min, .avg, .max{
+    margin-bottom: 10%;
 }
 
 nav{
-    background-color: #444;
-    flex: 1 1 25vw;
-}
-
-main{
-    background-color: #999;
-    flex: 3 1 75vw;
-}
-
-.row{
-    width: 100vw;
-    background-color: #105555;
-    height: 50vh;
-}
-.fl{
-    display: flex;
-    background-color: #5270ff;
-    justify-content: space-around;
+    background-color: #222;
+    flex: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+} 
+.nav-items{
+    padding: 0.5rem;
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
-.card{
-    margin: 0.5rem;
-    flex: 1 1 12%;
-    background-color: #9ecbdd;
-    border: 1px solid white;
-    text-align: center;
+.nav-item{
+    padding: 30%;
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #ddd;
 }
+.nav-item:hover{
+    color: #fff;
+    transform: scale(1.2);
+}
+
