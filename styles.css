@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+:root{
+    --primary-color: rgba(50,100,150, .8);
+}
 
 body{
     margin:0;
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(245, 240, 245, 0.6);
+    
 }
 
 .main-flex-container{
@@ -20,13 +25,15 @@ main{
     flex: 13;
     display: flex;
     flex-direction: column;
+    
 }
 .row{
     
-    flex: 1;
+    flex: 4.5;
 }
 .row-flex{
     display: flex;
+    flex-wrap: wrap;
 }
 #row-2{
     margin-bottom: 2vh;
@@ -41,15 +48,20 @@ main{
     align-items: flex-start;
     background-color: #fff;
     border-radius: 2%;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 3px 3px rgba(100, 100, 255, 0.08);
+    border: 0.1rem solid rgba(100, 100, 255, 0.1);
+         
 }
 .card-header{
-    font-size: 1.7rem;
-    padding: 8% 0 8% 3%;
-    flex: 1
+    font-size: 1.6rem;
+    
+    flex: 1;
+    background-color: var(--primary-color);
+    color: white;
+    margin: -15px 0 0 -5px;
+    padding: 2px 2px 2px 2px;
+    
+
 }
 .card-body{
     flex: 5;
@@ -59,7 +71,7 @@ main{
 .card:hover{
     transform: scale(1.007);
   
-    border: 1px solid #55f;
+
 }
 .metric-stat{
     font-size: 1.2rem;
@@ -82,7 +94,8 @@ main{
 }
 
 nav{
-    background-color: #222;
+    /* background-color: #222; */
+    background-color: var(--primary-color);
     flex: 1;
     display:flex;
     justify-content: center;
@@ -104,10 +117,48 @@ nav{
     width: 100%;
     display: flex;
     justify-content: center;
-    color: #ddd;
+    color: #ffffffdd;
 }
 .nav-item:hover{
-    color: #fff;
+    color: #ffffff;
     transform: scale(1.2);
 }
 
+
+#header-row{
+    order:-1;
+    flex: 1;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-evenly;
+    padding: 0.7%;
+    border-top: 5px solid var(--primary-color)
+}
+
+.header:hover{
+    transform: none;
+}
+
+.site-title{
+    flex:1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#date-control{
+    min-width: 150px;
+    max-width: 300px;
+    height:5vh;
+    background:none;
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 2%;
+    font-weight: bold;
+    font-size: large;
+}
