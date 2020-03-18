@@ -1,21 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 
 :root{
-    --primary-color: rgba(50,100,150, .8);
-    --primary-color-lighter: rgba(124, 178, 233, 0.8);
-    --background-color: rgba(240, 240, 250, 0.6);
+
     --font: 'Poppins';
     --size-1: 1.8rem;
     --size-2: 1.5rem;
     --size-3: 1.2rem;
+    --dropdown-text-hover: #fff;
 }
+
+.light-theme{
+    --primary-color: rgba(50,100,150, .8);
+    --nav-bg-color: rgba(50,100,150, .8);
+    --primary-color-lighter: rgba(124, 178, 233, 0.8);
+    --background-color: rgba(240, 240, 250, 0.6);
+    --shadow-color:  rgba(100, 100, 255, 0.08);
+    --border-color:  rgba(100, 100, 255, 0.1);
+    --nav-item-passive: #ffffffdd;
+    --nav-item-active: #ffffff;
+    --card-bg-color: #fff;
+    --text-color: black;
+    --dropdown-content-color: rgba(50,100,150, .8);
+;
+}
+
+.dark-theme{
+    --primary-color: rgba(250,250,250, 1);
+    --primary-color-lighter: rgba(255, 255, 255, 0.8);
+    --background-color: rgba(0, 240, 250, 0.6);
+    --shadow-color:  rgb(74, 69, 119);
+    --border-color:  rgba(20, 20, 24, 1);
+    --nav-item-passive: #ffffffdd;
+    --nav-item-active: #ffffff;
+    --nav-bg-color: #222;
+    --card-bg-color: #222;
+    --text-color: white;
+    --menu-item-color: #fffd;
+    --menu-item-hover-color:#fff;
+    --dropdown-content-color: #333
+}
+.dark-bg{
+    background-color: #333333ef;
+}
+.light-bg{
+    background-color: white;
+} 
 
 body{
     margin:0;
     font-family: var(--font), sans-serif;
-    background-color: var(--background-color);
-    
-    
 }
 
 .main-flex-container{
@@ -33,6 +66,7 @@ main{
     display: flex;
     flex-direction: column;
     margin: 0 1% 0 1%;
+    
 }
 .row{
     
@@ -47,16 +81,16 @@ main{
 }
 .card{
     flex: 1;
-    
+    background-color: var(--card-bg-color);
     margin: 0.6rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #fff;
+    color: var(--text-color);
     border-radius: 2%;
-    box-shadow: 0 3px 3px rgba(100, 100, 255, 0.08);
-    border: 0.1rem solid rgba(100, 100, 255, 0.1);
+    box-shadow: 0 3px 3px var(--shadow-color);
+    border: 0.1rem solid var(--border-color);
          
 }
 .card-header{
@@ -101,7 +135,7 @@ main{
 
 nav{
     /* background-color: #222; */
-    background-color: var(--primary-color);
+    background-color: var(--nav-bg-color);
     flex: 1;
     display:flex;
     justify-content: center;
@@ -123,10 +157,10 @@ nav{
     width: 100%;
     display: flex;
     justify-content: center;
-    color: #ffffffdd;
+    color: var(--nav-item-passive);
 }
 .nav-item:hover{
-    color: #ffffff;
+    color: var(--nav-item-active);
     transform: scale(1.2);
 }
 
@@ -182,12 +216,38 @@ nav{
 
 .dropdown-link{
     text-decoration: none;
-    color: rgba(255,255,255,0.9);
-    text-decoration: underline;
+    color: var(--nav-item-passive);
+    text-decoration: none;
     font-size: 1rem;
 }
 
 .dropdown-link:hover{
     color: var(--primary-color-lighter);
     font-size: 1.009rem;
+    text-decoration: underline;
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top:1px;
+  margin-left: -2px;
+  background-color: var(--card-bg-color);
+
+  min-width: 150px;
+  border: 3px solid var(--primary-color);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+    background-color: var(--dropdown-content-color);
+    color: var(--dropdown-text-hover);
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:active .dropdown-content {display: block;}

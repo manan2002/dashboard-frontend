@@ -2,10 +2,10 @@ var map;
 let lat = -25.8094;
 let long = 28.2564;
 // Get the data from Django view
-/* data = {{ req_site | safe }}; */
+
 function initMap() {
 
-    var site_name = Object.keys(data)[0];
+    var site_name = `Ben's House`;
 
     map = new google.maps.Map(document.querySelector('#map'), {
         center: { lat: parseFloat(lat), lng: parseFloat(long) },
@@ -22,12 +22,13 @@ function initMap() {
         title: site_name,
         label: {
             text: site_name,
-            color: 'red',
-            fontSize: "15px",
-            fontWeight: "bold"
+            color: 'blue',
+            fontSize: "20px",
+            fontWeight: 'bold'
+         
         },
-        icon: {
-            url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-        }
+        animation: google.maps.Animation.DROP
     });
+
 }
+
